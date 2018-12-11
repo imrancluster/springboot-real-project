@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"   
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="images/favicon.png">
+    	
+    	<!-- Bootstrap core CSS -->
+    	<link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+    	
+    	
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">SaveDream</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="/">Save Dream</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse" sec:authorize="!isAuthenticated()">
+	          <form class="navbar-form navbar-right" th:action="@{/login}" method="post">
+	            <div class="form-group">
+	              <input type="text" name="username" placeholder="Username" class="form-control">
+	            </div>
+	            <div class="form-group">
+	              <input type="password" name="password" placeholder="Password" class="form-control">
+	            </div>
+	            <button type="submit" class="btn btn-success">Sign in</button>
+	            <a href="/register/form" class="btn btn-default">Sing Up</a>
+	          </form>
+	        </div><!--/.navbar-collapse -->
+	        
+	        <div id="navbar" class="navbar-collapse collapse" sec:authorize="isAuthenticated()">
+	        	
+	        	<form class="navbar-form navbar-right" th:action="@{/logout}" method="post">
+	        		
+	        		<span class="user-info" th:if="${session.user != null}" th:text="'User: ' + ${#strings.toUpperCase(session.user.userName)}"></span>
+	        		 
+	            	<button type="submit" class="btn btn-success">Logout</button>
+	          	</form>
+	        </div>
+	      </div>
+	    </nav>
+      
+       <div id="main-content" class="container">
+    	
+       	<th:block layout:fragment="content">
+      		<!-- Example row of columns -->
+	      	<div class="row">
+		        <div class="col-md-12">
+		        	Base Theme
+		        </div>
+	      	</div>
+      	</th:block>
+
+      <hr>
+      <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+	        
+     <!-- Bootstrap core JavaScript -->
+     <script src="/webjars/jquery/1.9.1/jquery.min.js"></script>
+     <script src="/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script src="/sjs/script.js"></script>
+    
+    </body>
+</html>
