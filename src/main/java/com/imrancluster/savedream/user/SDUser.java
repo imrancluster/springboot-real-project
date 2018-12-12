@@ -3,9 +3,15 @@ package com.imrancluster.savedream.user;
 import java.util.LinkedHashMap;
 
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 import com.imrancluster.savedream.entity.UserType;
 import com.imrancluster.savedream.validation.FieldMatch;
@@ -33,6 +39,7 @@ public class SDUser {
 	private String name;
 	
 	@NotNull(message="is required")
+	@Pattern(regexp="^(0)\\d{10}$", message="Mobile number must 11 digit. eg. 017XXXXXXXX")
 	private String mobile;
 
 	@ValidEmail
@@ -40,7 +47,6 @@ public class SDUser {
 	@Size(min = 1, message = "is required")
 	private String email;
 	
-	@NotNull(message = "is required")
 	@Min(1)
 	private long userTypeId;
 	
