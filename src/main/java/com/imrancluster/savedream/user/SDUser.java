@@ -47,17 +47,10 @@ public class SDUser {
 	@Size(min = 1, message = "is required")
 	private String email;
 	
-	@Min(1)
+	@NotNull(message="is required")
 	private long userTypeId;
-	
-	
 
 	public SDUser() {
-
-//		userType = new LinkedHashMap<>();
-//		userType.put("dreamer", "Dreamer");
-//		userType.put("guardian", "Guardian");
-//		userType.put("donor", "Donor");
 	}
 
 	public String getUserName() {
