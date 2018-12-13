@@ -1,0 +1,48 @@
+{
+  "name": "mytonic-revamp",
+  "version": "1.0.2",
+  "description": "Revamp of mytonic.com",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comoyo/evergreen.git"
+  },
+  "keywords": [
+    "mytonic",
+    "mytonic",
+    "revamp"
+  ],
+  "author": "telenor health",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comoyo/evergreen/issues"
+  },
+  "homepage": "https://github.com/comoyo/evergreen#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-smushit": "^1.2.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "jquery-validation": "^1.16.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.3.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-util": "^3.0.8",
+    "pump": "^1.0.2"
+  }
+}

@@ -18,9 +18,8 @@
         
     </head>
     <body>
-    	
-    	
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <section class="main-wrapper main-bg">
+    	<nav class="navbar navbar-inverse navbar-fixed-top">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,7 +38,7 @@
 	            <div class="form-group">
 	              <input type="password" name="password" placeholder="Password" class="form-control">
 	            </div>
-	            <button type="submit" class="btn btn-success">Sign in</button>
+	            <button type="submit" class="btn btn-success dream-btn">Sign in</button>
 	            <a href="/register/form" class="btn btn-default">Sing Up</a>
 	          </form>
 	        </div><!--/.navbar-collapse -->
@@ -56,22 +55,23 @@
 	      </div>
 	    </nav>
       
-       <div id="main-content" class="container">
-    	
-       	<th:block layout:fragment="content">
-      		<!-- Example row of columns -->
-	      	<div class="row">
-		        <div class="col-md-12">
-		        	Base Theme
-		        </div>
-	      	</div>
-      	</th:block>
-
-      <hr>
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
+	    <div id="main-content" class="container">
+	    	
+	       	<th:block layout:fragment="content">
+	      		<!-- Example row of columns -->
+		      	<div class="row">
+			        <div class="col-md-12">
+			        	Base Theme
+			        </div>
+		      	</div>
+	      	</th:block>
+	
+	      <hr>
+	      <footer>
+	        <p>&copy; 2018 Company, Inc.</p>
+	      </footer>
+	   	</div> <!-- /container -->
+    </section>
 	        
      <!-- Bootstrap core JavaScript -->
      <script src="/webjars/jquery/1.9.1/jquery.min.js"></script>

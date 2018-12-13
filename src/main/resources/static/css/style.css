@@ -1,8 +1,33 @@
+.main-wrapper .btn {
+  border-color: transparent;
+  border-radius: 0;
+}
+.main-wrapper .form-control {
+  border-radius: 0;
+  border-color: transparent;
+}
+.main-wrapper .navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+}
+.main-wrapper .navbar-inverse .navbar-header .navbar-brand {
+  color: #fff;
+}
+.main-wrapper .navbar-inverse #navbar .dream-btn {
+  background-color: #FED102;
+}
 #main-content {
-	margin-top: 100px;
+  padding-top: 100px;
 }
-
 .navbar-form {
-	color: #fff;
+  color: #fff;
+}
+.main-bg {
+  height: auto;
+  min-height: 800px;
+  background: linear-gradient(rgba(0, 149, 219, 0.9), rgba(0, 149, 219, 0.8)), /* bottom, image */ url("../images/dreamer.jpg");
+  background-position: center center;
+  color: #fff;
 }
 
+/*# sourceMappingURL=style.css.map */
